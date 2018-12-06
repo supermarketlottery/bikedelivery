@@ -14,6 +14,12 @@
   <script src="js/picturefill.min.js" class="picturefill" async="async"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:b%7CRoboto+Condensed:300,400,b%7CRoboto:400,b">
+  <script>
+  UPLOADCARE_LOCALE = "en";
+  UPLOADCARE_TABS = "file";
+  UPLOADCARE_PUBLIC_KEY = "43a54083284a91f25086";
+</script>
+<script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
 </head>
 
 
@@ -385,11 +391,27 @@ public static boolean valPostcode(String postcode)
     <input type="email" name="_replyto" placeholder="Email">
 	</div>
 	<textarea name="message" placeholder="Order Number"></textarea></a>
+	<h3> Please click 'choose a file' to send a screencapture of your order </h3>
 	
+	<!-- This is where the widget will be. Don't forget the name attribute! -->
+
+	<input type="hidden" role="uploadcare-uploader" name="Screenshot"  />
+            </div>
+
     <input type="submit" value="Submit your pick up request">
 </form>
 
-            </div>
+
+
+<!-- The best place for this is your <HEAD> tag -->
+<script>UPLOADCARE_PUBLIC_KEY = "43a54083284a91f25086";
+
+
+</script>
+<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+
+<!-- And this is how you set the place on a page where the widget will appear. Do not miss the name attribute -->
+
 			
           </div>
 		  <div class="coffee-span-6 coffee-592-span-12">
